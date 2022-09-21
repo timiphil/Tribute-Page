@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background: url(./images/bg-pattern-top.svg), hsl(185, 75%, 39%);
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  display: flexbox;
+  /* display: -webkit-box; */
+  /* display: -ms-flexbox; */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+#title {
+  font-size: 50px;
+  text-align: center;
+  padding: 4.7rem 4.5rem 0.5rem;
+  line-height: 40px;
+  margin-bottom: 1rem;
+}
+
+#image {
+  max-width: 25%;
+  height: auto;
+  display: block;
+  margin: auto;
+  background: url(./images/bg-pattern-card.svg);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+}
+#image:hover {
+  -moz-box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
+  box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
+}
+#img-caption {
+  font-size: 25px;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-weight: 700;
+}
+#tribute-info {
+  font-size: 20px;
+  text-align: justify;
+  padding: 1rem 4rem;
+}
+/* styling the attribution */
+.attribution {
+  position: absolute;
+  font-size: 15px;
+  bottom: 2vh;
+  left: 50%;
+  text-align: center;
+  color: rgb(220, 220, 240);
+  transform: translate(-50%);
+  z-index: 10;
+  padding: 5rem 1rem 0 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  cursor: pointer;
+  text-decoration: none;
+}
