@@ -1,44 +1,58 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+*,
+* > * {
+  /* outline: 20px solid pink; */
+  margin: 0;
+  padding: 0;
 }
-
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  size: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.whole {
+  max-width: 100%;
+}
 main {
   background: url(./images/bg-pattern-top.svg), hsl(185, 75%, 39%);
   background-repeat: no-repeat;
-  width: 100vw;
   min-height: 100vh;
   display: flexbox;
-  /* display: -webkit-box; */
-  /* display: -ms-flexbox; */
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  overflow: hidden;
   position: relative;
 }
 #title {
-  font-size: 50px;
+  font-size: 1.05rem;
   text-align: center;
-  padding: 4.7rem 4.5rem 0.5rem;
+  padding: 1em 4em 0.5em;
   line-height: 40px;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
+  color: #fff;
 }
-
+#img-div {
+  max-width: 100%;
+}
 #image {
-  max-width: 25%;
+  max-width: 30%;
+  min-width: 30%;
+  object-fit: contain;
   height: auto;
   display: block;
   margin: auto;
   background: url(./images/bg-pattern-card.svg);
-  border: 4px solid #fff;
+  box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
   border-radius: 50%;
-  z-index: 10;
-  position: relative;
 }
 #image:hover {
   -moz-box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
@@ -47,27 +61,32 @@ main {
   box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
 }
 #img-caption {
-  font-size: 25px;
+  font-size: 1.05rem;
   text-align: center;
-  padding: 2rem 1rem;
+  margin: 0 auto;
   font-weight: 700;
+  color: #fff;
+  padding: 1em 0;
 }
 #tribute-info {
-  font-size: 20px;
-  text-align: justify;
-  padding: 1rem 4rem;
+  font-size: 1.05rem;
+  text-align: start;
+  padding: 1em 2em;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 1px;
 }
 /* styling the attribution */
 .attribution {
-  position: absolute;
-  font-size: 15px;
+  position: relative;
+  font-size: 1rem;
   bottom: 2vh;
   left: 50%;
   text-align: center;
   color: rgb(220, 220, 240);
   transform: translate(-50%);
   z-index: 10;
-  padding: 5rem 1rem 0 2rem;
+  padding: 1em 1em 0 2em;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
