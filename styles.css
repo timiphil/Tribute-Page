@@ -1,95 +1,81 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Roboto+Serif:opsz,wght@8..144,800&family=Trocchi&display=swap");
+
+/* Font Family */
+:root {
+  --ff-Crimson: "Crimson Text", serif;
+  --ff-Roboto-Serif: "Roboto Serif", serif;
+  --ff-Trocchi: "Trocchi", serif;
+}
 *,
 * > * {
-  /* outline: 20px solid pink; */
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  /* outline: 2px solid pink; */
 }
+
 body {
-  min-width: 100vw;
-  min-height: 100vh;
-  size: 1.5rem;
-  display: flex;
-  flex-flow: column nowrap;
-}
-.whole {
-  max-width: 100%;
-}
-main {
+  margin: 0;
+  padding: 1rem;
+  max-width: 100vw;
+  font-family: var(--ff-Crimson);
+  font-size: 1.2rem;
   background: url(./images/bg-pattern-top.svg), hsl(185, 75%, 39%);
   background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flexbox;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
+  color: #ebfbe9;
 }
-#title {
-  font-size: 1.05rem;
+
+.whole {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: var(--ff-Roboto-Serif);
+  font-size: 2.8em;
+  font-weight: 800;
   text-align: center;
-  padding: 1em 4em 0.5em;
-  line-height: 40px;
-  margin-bottom: 1em;
-  color: #fff;
 }
-#img-div {
+
+img {
   max-width: 100%;
-}
-#image {
-  max-width: 30%;
-  min-width: 30%;
-  object-fit: contain;
-  height: auto;
   display: block;
-  margin: auto;
-  background: url(./images/bg-pattern-card.svg);
-  box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
   border-radius: 50%;
+  margin-bottom: 1em;
 }
-#image:hover {
+img:hover {
   -moz-box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
   transform: scale(1.05);
   -webkit-box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
   box-shadow: 0px 8px 24px hsl(185deg 74% 27%);
 }
-#img-caption {
-  font-size: 1.05rem;
+
+figcaption {
+  font-size: 1.6em;
   text-align: center;
-  margin: 0 auto;
-  font-weight: 700;
-  color: #fff;
-  padding: 1em 0;
+  font-family: var(--ff-Roboto-Serif);
 }
-#tribute-info {
-  font-size: 1.05rem;
-  text-align: start;
-  padding: 1em 2em;
-  color: #fff;
-  line-height: 1.2;
-  letter-spacing: 1px;
+
+p {
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
+p > a {
+  color: inherit;
+}
+p::first-letter {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: aquamarine;
+  padding: 0.5em 0.1em 0 0;
+  vertical-align: 5%;
 }
 /* styling the attribution */
-.attribution {
-  position: relative;
-  font-size: 1rem;
-  bottom: 2vh;
-  left: 50%;
+footer {
+  padding: 1em;
   text-align: center;
-  color: rgb(220, 220, 240);
-  transform: translate(-50%);
-  z-index: 10;
-  padding: 1em 1em 0 2em;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-  cursor: pointer;
-  text-decoration: none;
+  font-style: italic;
 }
